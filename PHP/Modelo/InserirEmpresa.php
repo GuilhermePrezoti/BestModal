@@ -32,6 +32,7 @@
                 }//fim do catch
     
             }//fim da função
+
     }//fim da class
 
 ?>
