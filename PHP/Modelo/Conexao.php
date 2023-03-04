@@ -7,10 +7,11 @@
             try{
                 $conn = mysqli_connect('localhost', 'root', '', 'BestModal');
                 if($conn){
-                    return "Conectado com sucesso!";
+                   return $conn;
                     
-                }
-            }
+                }//fim do if
+                echo "Não Conectado!";
+            }//fim do try
             catch(Exception $erro){
                 echo $erro;
 
