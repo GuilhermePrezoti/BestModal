@@ -9,6 +9,7 @@
         public function cadastrarCliente(
         Conexao $conexao,
         int $cpf,
+        string $email,
         string $nome,
         string $rua,
         string $bairro,
@@ -18,7 +19,7 @@
             
             try{
                 $conn = $conexao->conectar();
-                $sql  = "insert into cliente (cpf, nome, rua, bairro, numero, cep, telefone) values('$cpf','$nome','$rua','$bairro','$numero','$cep','$telefone')";
+                $sql  = "insert into cliente (cpf, email, nome, rua, bairro, numero, cep, telefone) values('$cpf', '$email', '$nome','$rua','$bairro','$numero','$cep','$telefone')";
                 $result = mysqli_query($conn, $sql);
 
                 if($result){
